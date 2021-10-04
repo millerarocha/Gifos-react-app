@@ -23,6 +23,9 @@ import {gifsList} from './DB/gifDB'
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const [value,setValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [gifList, setGifList] = useState([]);
   return (
     <div 
       className={`app ${isDark ? "app--dark" : "app--light"}`}
@@ -45,6 +48,8 @@ function App() {
         {/* Search */}
         <Search 
           className='search'
+          value={value}
+          setValue={setValue}
         >
           <h1 
             className={`search__title ${isDark ? "search__title--dark" : "search__title--light"}`}

@@ -3,14 +3,19 @@
  */
 import './Gif.css'
 
-const Gif = ({src}) => {
+const Gif = ({
+    src,
+    link
+}) => {
     return (
-        <div>
-            <img 
-                src={src}
-                className="gif__image"
-            />
-        </div>
+        <>
+            <a href={link} className="gif__link">
+                <img 
+                    src={src} 
+                    className="gif__image"                   
+                />            
+            </a>
+        </>
     )
 }
 
