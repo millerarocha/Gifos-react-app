@@ -1,0 +1,36 @@
+.result{
+    text-align: center;
+}
+
+.subtitle--dark{
+    color: white;
+}
+
+.subtitle--light{
+    color: #572EE5;
+}
+
+.gif__container{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.gif__container--light{
+    background-color: #E7E7E7;
+}
+
+.gif__container--dark{
+    background-color: #212121;
+}
+
+.gif__image{
+    width: 300px;
+    height: 300px;
+    vertical-align: center;
+    object-fit: cover;
+    margin: 10px 0;
+}

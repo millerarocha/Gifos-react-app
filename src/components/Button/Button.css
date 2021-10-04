@@ -1,0 +1,23 @@
+.btn{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 30px;
+    background-color: transparent;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.btn--light{
+    border: 1px solid #6809E1;
+    color: #6809E1;
+}
+
+.btn--light:hover{
+    background-color: #50E3C2;
+    border: 1px solid #50E3C2;
+}
+
+.btn--dark{
+    border: 1px solid #F3F3F3;
+    color: #F3F3F3;
+}

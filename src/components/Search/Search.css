@@ -1,0 +1,20 @@
+.search{
+    display: block;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.search__title{
+    font-weight: 400;
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.search__title--dark{
+    color: #f3f3f3;
+}
+
+.search__title--light{
+    color: #572EE5;
+    ;
+}
