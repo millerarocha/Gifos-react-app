@@ -12,6 +12,7 @@ import Button from './components/Button/Button'
 import Search from './components/Search/Search'
 import SearchInput from './components/SearchInput/SearchInput'
 import Result from './components/Result/Result'
+import SearchList from './components/SearchList/SearchList'
 
 /**
  * Styles
@@ -52,6 +53,8 @@ function App() {
           <SearchInput
             mode={isDark}
           />
+          <SearchList>            
+          </SearchList>
         </Search>
 
         {/* Result */}

@@ -6,7 +6,7 @@ import './SearchInput.css'
 import searchImg from '../../assets/images/ilustra_header.svg'
 import Button from '../Button/Button'
 
-const SearchInput = ({mode}) => {
+const SearchInput = ({mode, children}) => {
     return (
         <div className='search__input'>
             <img src={searchImg} alt="Imagen de inicio" />
@@ -22,6 +22,7 @@ const SearchInput = ({mode}) => {
                     <span className='icon'></span>
                 </Button>
             </div>
+            {children}
         </div>
     )
 }
