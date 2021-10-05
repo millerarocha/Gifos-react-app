@@ -33,3 +33,9 @@
     background-position: center;
     margin-right: 10px;
 }
+@media (max-width:767px){
+    .search__list{
+        width: 300px;
+        top: 175px;
+    }
+}
