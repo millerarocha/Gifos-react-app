@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Gifos-react-app/static/css/main.f3293d81.chunk.css",
+    "main.css": "/Gifos-react-app/static/css/main.ae956244.chunk.css",
     "main.js": "/Gifos-react-app/static/js/main.5bc22980.chunk.js",
     "main.js.map": "/Gifos-react-app/static/js/main.5bc22980.chunk.js.map",
     "runtime-main.js": "/Gifos-react-app/static/js/runtime-main.1f71c6dc.js",
@@ -8,7 +8,7 @@
     "static/js/2.f264575e.chunk.js": "/Gifos-react-app/static/js/2.f264575e.chunk.js",
     "static/js/2.f264575e.chunk.js.map": "/Gifos-react-app/static/js/2.f264575e.chunk.js.map",
     "index.html": "/Gifos-react-app/index.html",
-    "static/css/main.f3293d81.chunk.css.map": "/Gifos-react-app/static/css/main.f3293d81.chunk.css.map",
+    "static/css/main.ae956244.chunk.css.map": "/Gifos-react-app/static/css/main.ae956244.chunk.css.map",
     "static/js/2.f264575e.chunk.js.LICENSE.txt": "/Gifos-react-app/static/js/2.f264575e.chunk.js.LICENSE.txt",
     "static/media/SearchInput.css": "/Gifos-react-app/static/media/icon-search-mod-noc.ecc2b197.svg",
     "static/media/SearchList.css": "/Gifos-react-app/static/media/icon-search.657bf939.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1f71c6dc.js",
     "static/js/2.f264575e.chunk.js",
-    "static/css/main.f3293d81.chunk.css",
+    "static/css/main.ae956244.chunk.css",
     "static/js/main.5bc22980.chunk.js"
   ]
 }
