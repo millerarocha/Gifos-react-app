@@ -18,3 +18,11 @@
     color: #572EE5;
     ;
 }
+
+
+@media (max-width:767px){
+    .search__title{
+        font-size: 25px;
+        margin: 5px 0;
+    }
+}

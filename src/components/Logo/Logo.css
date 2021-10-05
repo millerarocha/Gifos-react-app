@@ -14,3 +14,10 @@
     background-image: url('../../assets/images/logo-desktop.svg');
 }
 
+@media (max-width:767px){
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+}
+

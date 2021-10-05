@@ -48,3 +48,12 @@
     background-size: cover;
     background-position: center;
 }
+
+@media (max-width:767px){
+    .search__input--container input{
+        min-width: 250px;
+    }
+    .search__input img{
+        width: 250px;
+    }
+}
