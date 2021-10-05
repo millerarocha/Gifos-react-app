@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Gifos-react-app/static/css/main.f3293d81.chunk.css",
+    "main.js": "/Gifos-react-app/static/js/main.5bc22980.chunk.js",
+    "main.js.map": "/Gifos-react-app/static/js/main.5bc22980.chunk.js.map",
+    "runtime-main.js": "/Gifos-react-app/static/js/runtime-main.1f71c6dc.js",
+    "runtime-main.js.map": "/Gifos-react-app/static/js/runtime-main.1f71c6dc.js.map",
+    "static/js/2.f264575e.chunk.js": "/Gifos-react-app/static/js/2.f264575e.chunk.js",
+    "static/js/2.f264575e.chunk.js.map": "/Gifos-react-app/static/js/2.f264575e.chunk.js.map",
+    "index.html": "/Gifos-react-app/index.html",
+    "static/css/main.f3293d81.chunk.css.map": "/Gifos-react-app/static/css/main.f3293d81.chunk.css.map",
+    "static/js/2.f264575e.chunk.js.LICENSE.txt": "/Gifos-react-app/static/js/2.f264575e.chunk.js.LICENSE.txt",
+    "static/media/SearchInput.css": "/Gifos-react-app/static/media/icon-search-mod-noc.ecc2b197.svg",
+    "static/media/SearchList.css": "/Gifos-react-app/static/media/icon-search.657bf939.svg",
+    "static/media/ilustra_header.9d4669b1.svg": "/Gifos-react-app/static/media/ilustra_header.9d4669b1.svg",
+    "static/media/Logo.css": "/Gifos-react-app/static/media/logo-mobile-modo-noct.47e214b1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f71c6dc.js",
+    "static/js/2.f264575e.chunk.js",
+    "static/css/main.f3293d81.chunk.css",
+    "static/js/main.5bc22980.chunk.js"
+  ]
+}
