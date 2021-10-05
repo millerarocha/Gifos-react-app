@@ -9,7 +9,11 @@ const Gif = ({
 }) => {
     return (
         <>
-            <a href={link} className="gif__link">
+            <a 
+                href={link} 
+                className="gif__link"
+                target="_blank"
+            >
                 <img 
                     src={src} 
                     className="gif__image"                   

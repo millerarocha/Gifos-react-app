@@ -2,27 +2,26 @@ import React from 'react'
 import './SearchList.css'
 
 const SearchList = ({
-    isVisible=false    
-}) => {
+    isVisible=false,
+    itemClick,
+    autoComplete    
+}) => {    
     return (
         <div className={isVisible ? "search__list visible" : "search__list"}>
-            <div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div>
-            <div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div>
-            <div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div>
-            <div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div>
-            <div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div><div className="search__list-item">
-                <span className="search__list-icon"></span>Dragon ball
-            </div>
+            {(autoComplete || []).map(item =>{
+                return (
+                <div 
+                    className="search__list-item" 
+                    key={item.name}
+                    onClick={()=>{
+                        itemClick(item.name);
+                    }}
+                >
+                    <span className="search__list-icon"></span>
+                    {item.name}
+                </div>)
+            })}
+            
         </div>
     )
 }

@@ -21,19 +21,23 @@ const Result = ({
             <div 
                 className={`gif__container ${mode ? "gif__container--dark" : "gif__container--light"}`}
             >
-                {(data || []).map(item => {
-                    const { id, images:{
-                        fixed_height:{
-                            url
-                        }
-                    }} = item;
-                    return (
-                        <Gif 
-                            key={id}
-                            src={url} 
-                        />
-                    )
-                })}
+                {!data.length?
+                    <h2>No se encontraron resultados!</h2>:
+                    (data || []).map(item => {
+                        const { id, url:link, images:{
+                            fixed_height:{
+                                url
+                            }
+                        }} = item;
+                        return (
+                            <Gif 
+                                key={id}
+                                src={url}
+                                link={link} 
+                            />
+                        )
+                    })
+                }
             </div>
         </div>
     )

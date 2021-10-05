@@ -20,8 +20,6 @@ import { request } from './utils/request'
  */
 import './App.css';
 
-//import {gifsList} from './DB/gifDB'
-
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [value,setValue] = useState("");
@@ -29,6 +27,19 @@ function App() {
   const [gifsList, setGifsList] = useState([]);
   const [isVisible,setIsVisible] = useState(false);
   const [isSearching,setIsSearching] = useState(false);
+  const [autoComplete,setAutoComplete] = useState([]);
+
+  useEffect(()=>{
+    request("/trending","",15)
+      .then(res => res.json())
+      .then(data => setGifsList(data.data))
+      .catch(err => console.log(err))
+      .finally(()=>{
+        setIsSearching(false);
+        setIsLoading(false);
+        setValue("");
+    })
+  },[]);
 
   useEffect(()=>{
     if(value !== ""){
@@ -46,11 +57,21 @@ function App() {
       .then(data => setGifsList(data.data))
       .catch(err => console.log(err))
       .finally(()=>{
-        setIsSearching(false)
+        setIsSearching(false);
         setIsLoading(false);
+        setValue("");
       })
     }
-  },[isSearching,value])
+  },[isSearching,value]);
+
+  useEffect(()=>{
+    if(value !== ""){
+      request("/search/tags",value,5)
+      .then(res => res.json())
+      .then(data => setAutoComplete(data.data))
+      .catch(err => console.log(err))
+    }
+  },[value]);
 
   return (
     <div 
@@ -88,6 +109,11 @@ function App() {
           >
             <SearchList
               isVisible={isVisible}
+              autoComplete={autoComplete}
+              itemClick={(value)=>{
+                setValue(value);
+                setIsSearching(!isSearching);
+              }}
             >            
             </SearchList>
           </SearchInput>
