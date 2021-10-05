@@ -1,7 +1,7 @@
 /**
  * Dependencies
  */
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 /**
  * Components
@@ -13,19 +13,45 @@ import Search from './components/Search/Search'
 import SearchInput from './components/SearchInput/SearchInput'
 import Result from './components/Result/Result'
 import SearchList from './components/SearchList/SearchList'
+import { request } from './utils/request'
 
 /**
  * Styles
  */
 import './App.css';
 
-import {gifsList} from './DB/gifDB'
+//import {gifsList} from './DB/gifDB'
 
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [value,setValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [gifList, setGifList] = useState([]);
+  const [gifsList, setGifsList] = useState([]);
+  const [isVisible,setIsVisible] = useState(false);
+  const [isSearching,setIsSearching] = useState(false);
+
+  useEffect(()=>{
+    if(value !== ""){
+      setIsVisible(true);
+    }else{
+      setIsVisible(false);  
+    }
+  },[value]);
+
+  useEffect(()=>{
+    if(isSearching && value !== ""){
+      setIsLoading(true);
+      request("/search",value)
+      .then(res => res.json())
+      .then(data => setGifsList(data.data))
+      .catch(err => console.log(err))
+      .finally(()=>{
+        setIsSearching(false)
+        setIsLoading(false);
+      })
+    }
+  },[isSearching,value])
+
   return (
     <div 
       className={`app ${isDark ? "app--dark" : "app--light"}`}
@@ -48,8 +74,6 @@ function App() {
         {/* Search */}
         <Search 
           className='search'
-          value={value}
-          setValue={setValue}
         >
           <h1 
             className={`search__title ${isDark ? "search__title--dark" : "search__title--light"}`}
@@ -57,15 +81,23 @@ function App() {
           </h1>
           <SearchInput
             mode={isDark}
-          />
-          <SearchList>            
-          </SearchList>
+            value={value}
+            setValue={setValue}
+            onClick={()=>setIsSearching(!isSearching)}
+            disabled={isSearching || value===""}
+          >
+            <SearchList
+              isVisible={isVisible}
+            >            
+            </SearchList>
+          </SearchInput>
         </Search>
 
         {/* Result */}
         <Result
           data={gifsList}
           mode={isDark}
+          isLoading={isLoading}
         >
         </Result>
       </div>

@@ -9,6 +9,20 @@ const SearchList = ({
             <div className="search__list-item">
                 <span className="search__list-icon"></span>Dragon ball
             </div>
+            <div className="search__list-item">
+                <span className="search__list-icon"></span>Dragon ball
+            </div>
+            <div className="search__list-item">
+                <span className="search__list-icon"></span>Dragon ball
+            </div>
+            <div className="search__list-item">
+                <span className="search__list-icon"></span>Dragon ball
+            </div>
+            <div className="search__list-item">
+                <span className="search__list-icon"></span>Dragon ball
+            </div><div className="search__list-item">
+                <span className="search__list-icon"></span>Dragon ball
+            </div>
         </div>
     )
 }

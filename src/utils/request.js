@@ -1,1 +1,1 @@
-export const request = (resource,query) => fetch(`https://api.giphy.com/v1/gifs/${resource}?api_key=i6WoSbql0ll5RIC17P243kBWemkCeCIu&q=${query}&limit=10&offset=0&rating=g&lang=en`);
+export const request = (resource,query) => fetch(`https://api.giphy.com/v1/gifs${resource}?api_key=i6WoSbql0ll5RIC17P243kBWemkCeCIu&q=${query}&limit=25&offset=0&rating=g&lang=en`);

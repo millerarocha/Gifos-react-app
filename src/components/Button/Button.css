@@ -6,6 +6,10 @@
     border-radius: 60px;
     cursor: pointer;
 }
+.btn:disabled{
+    background-color: #110322;
+    cursor: not-allowed;
+}
 
 .btn--light{
     border: 1px solid #6809E1;

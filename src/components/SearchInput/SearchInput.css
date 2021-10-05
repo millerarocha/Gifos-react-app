@@ -1,5 +1,6 @@
 .search__input{
     margin: 0 auto;
+    position: relative;
 }
 
 .search__input--container{

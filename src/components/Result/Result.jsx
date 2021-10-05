@@ -7,22 +7,26 @@ import './Result.css'
 import Gif from '../Gif/Gif'
 
 const Result = ({
-    children,
     mode,
-    data
+    data,
+    isLoading
 }) => {
     return (
         <div className='result'>      
             <h2 
                 className = {mode ? "subtitle--dark" : "subtitle--light"}
             >
-                Resultados de la búsqueda
+                {isLoading ? 'Cargando....':'Resultados de la búsqueda'}
             </h2>            
             <div 
                 className={`gif__container ${mode ? "gif__container--dark" : "gif__container--light"}`}
             >
                 {(data || []).map(item => {
-                    const { id, url } = item;
+                    const { id, images:{
+                        fixed_height:{
+                            url
+                        }
+                    }} = item;
                     return (
                         <Gif 
                             key={id}
